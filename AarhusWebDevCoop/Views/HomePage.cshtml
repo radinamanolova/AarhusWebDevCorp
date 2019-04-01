@@ -1,0 +1,47 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<div class="jumbotron bg-info text-white">
+  <h1 class="display-4">Welcome to the Aarhus Web Developer Corporation!</h1>
+  <p class="lead">We are the corporation than unites the web developers in Aarhus.</p>
+  <hr class="my-4">
+  <p>To learn more about us click the button below!</p>
+    <a class="btn btn-secondary btn-lg" href="/about-us" role="button">Learn more</a>
+</div>
+
+<div class="container">
+  <div class="row">
+      
+    <div class="col">
+        <h1>Read the latest articles</h1>
+            <p class="lead text-justify" style="margin-top: 2.5em;">
+    You may have thought about learning a programming language or 
+    two and becoming a web developer. 
+    If you have, you probably have a few questions, such as:
+    What is a web developer and what do web developers do?
+    Luckily for you, we understand that aspiring web developers 
+    will have questions about the profession, which is why we have 
+    put together these articles, which aims to answer 
+    these questions and more.
+    We will cover the question of what is a web developer?, 
+    we will look at the types of web developers, and we will 
+    look at the web design vs web development debate. We will 
+    also cover some of the most popular programming languages 
+    for aspiring web developers, including Python, JavaScript, and HTML.
+            </p>
+            <a class="btn btn-success btn-lg" style="margin-top: 1em;" href="/articles" role="button">Read more</a>
+    </div>
+
+    <div class="col">
+        <h1 style="margin-left: 1em;">Newest projects</h1>
+           <p style="margin-left: 1em;"> 
+           @Umbraco.RenderMacro("listNewestProjects") 
+           <a class="btn btn-success btn-lg" style="margin-left: 2.2em; margin-top: 2.2em;" href="/projects" role="button">See all projects</a>
+           </p>
+    </div>
+
+</div>
+</div>
